@@ -1,0 +1,14 @@
+Mood
+has_many :prompts
+    :state - string
+
+Prompt
+belongs_to :mood
+has_many :actions
+    :desc - string
+    :mood_id
+    :controllable - boolean
+
+Action
+belongs_to :prompt
+    :desc - string
