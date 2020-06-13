@@ -8,7 +8,20 @@ has_many :actions
     :desc - string
     :mood_id
     :controllable - boolean
+        - if true, create Action
+        - if false, randomized positive message about letting go pops up
 
 Action
 belongs_to :prompt
     :desc - string
+
+Requirements:
+2 container components
+    - MoodContainer
+    - PromptContainer
+5 stateless components
+    - Moods
+    - Mood
+    - PromptsInput
+    - Prompts
+    - Prompt

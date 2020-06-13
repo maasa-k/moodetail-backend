@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+happy = Mood.create(state: "Happy")
+angry = Mood.create(state: "Angry")
+humorous = Mood.create(state: "Humorous")
+anxious = Mood.create(state: "Anxious")
+calm = Mood.create(state: "Calm")
+fearful = Mood.create(state: "Fearful")
+hopeful = Mood.create(state: "Hopeful")
+sad = Mood.create(state: "Sad")
+
+# prommpt = Prompt.create(desc: "Graduating from school", mood_id: 1, controllable: true)
