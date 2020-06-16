@@ -1,6 +1,6 @@
 Mood
 has_many :prompts
-    :state - string
+    :feeling - string
 
 Prompt
 belongs_to :mood
