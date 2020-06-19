@@ -1,3 +1,3 @@
 class PromptSerializer < ActiveModel::Serializer
-  attributes :id, :desc
+  attributes :id, :desc, :mood_id
 end

@@ -10,16 +10,9 @@ class Api::V1::PromptsController < ApplicationController
     end
 
     def create
+        binding.pry
         @prompt = @mood.prompts.create(prompt_params)
         render json: @prompt
-    #   prompt = Prompt.create(prompt_params)
-    #   render json: prompt, include: :mood
-    #   prompt = Prompt.new(prompt_params)
-    #     if prompt.save
-    #         render json: prompt, include: :mood
-    #     else 
-    #         render json: {error: 'Error creating prompt'}
-    #     end
     end
 
     def show 
