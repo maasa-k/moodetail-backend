@@ -25,3 +25,8 @@ Requirements:
     - PromptsInput
     - Prompts
     - Prompt
+3 routes
+    - Home
+        - links to:
+            - create new prompt entry
+            - show pages for each mood feeling (8 total)

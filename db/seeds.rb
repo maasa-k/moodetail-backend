@@ -6,6 +6,3 @@ calm = Mood.create(feeling: "Calm")
 fearful = Mood.create(feeling: "Fearful")
 hopeful = Mood.create(feeling: "Hopeful")
 sad = Mood.create(feeling: "Sad")
-
-happy_prompt = Prompt.create(desc: 'Graduating from Flatiron', mood_id: 1)
-calm_prompt = Prompt.create(desc: 'Belly breathing', mood_id: 5)

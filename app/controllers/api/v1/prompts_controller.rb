@@ -5,44 +5,34 @@ class Api::V1::PromptsController < ApplicationController
     def index
         @prompts = @mood.prompts
         render json: @prompts
-        # prompts = Prompt.all 
-        # render json: prompts
     end
 
     def create
-        binding.pry
         @prompt = @mood.prompts.create(prompt_params)
-        render json: @prompt
+        render json: @mood
     end
 
     def show 
         @prompt = @mood.prompts.find(params[:id])
         render json: @prompt
-        # prompt = Prompt.find_by(id: params[:id])
-        # render json: prompt, include: :mood
     end
 
-    def update
-        @prompt = @mood.prompts.find(params[:id])
-        render json: @prompt
-    #   prompt = Prompt.find_by(id: params[:id])
-    #   prompt.update(prompt_params)
-    #   render json: prompt, include: :mood
-    end
+    # def update
+    #     @prompt = @mood.prompts.find(params[:id])
+    #     @prompt.update(prompt_params)
+    #     render json: @mood
+    # end
 
     def destroy
         @prompt = @mood.prompts.find(params[:id])
         @prompt.destroy
-        render json: @prompt.id
-    #   prompt = Prompt.find_by(id: params[:id])
-    #   prompt.destroy
-    #   render json: prompt.id
+        render json: @mood
     end
 
     private
 
     def prompt_params
-      params.require(:prompt).permit(:desc, :mood_id)
+      params.require(:prompt).permit(:desc, :mood_id, :controllable {action: [:desc, :prompt_id]})
     end
 
     def set_mood
