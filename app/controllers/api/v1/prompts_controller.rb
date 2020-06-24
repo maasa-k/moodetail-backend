@@ -32,7 +32,8 @@ class Api::V1::PromptsController < ApplicationController
     private
 
     def prompt_params
-      params.require(:prompt).permit(:desc, :mood_id, :controllable {action: [:desc, :prompt_id]})
+    #   params.require(:prompt).permit(:desc, :mood_id, :controllable {action: [:desc, :prompt_id]})
+      params.require(:prompt).permit(:desc, :mood_id, :controllable)
     end
 
     def set_mood

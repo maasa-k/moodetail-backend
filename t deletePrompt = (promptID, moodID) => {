@@ -1,9 +1,0 @@
-
-[1mFrom:[0m /mnt/c/Users/konom/FLATIRON/react-redux-portfolio-project/moodetail-app/moodetail-backend/app/controllers/api/v1/actions_controller.rb:11 Api::V1::ActionsController#create:
-
-    [1;34m10[0m: [32mdef[0m [1;34mcreate[0m
- => [1;34m11[0m:     binding.pry
-    [1;34m12[0m:     @prompt = @prompt.actions.create(prompt_params)
-    [1;34m13[0m:     render [35mjson[0m: @prompt
-    [1;34m14[0m: [32mend[0m
-
