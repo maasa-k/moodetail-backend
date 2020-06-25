@@ -8,6 +8,7 @@ class Api::V1::PromptsController < ApplicationController
     end
 
     def create
+        # binding.pry
         @prompt = @mood.prompts.create(prompt_params)
         render json: @mood
     end
