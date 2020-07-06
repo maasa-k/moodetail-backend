@@ -4,16 +4,10 @@ has_many :prompts
 
 Prompt
 belongs_to :mood
-has_many :actions
     :desc - string
     :mood_id
     :controllable - boolean
-        - if true, create Action
         - if false, randomized positive message about letting go pops up
-
-Action
-belongs_to :prompt
-    :desc - string
 
 Requirements:
 2 container components

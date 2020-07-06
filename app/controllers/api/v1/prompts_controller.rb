@@ -8,7 +8,6 @@ class Api::V1::PromptsController < ApplicationController
     end
 
     def create
-        # binding.pry
         @prompt = @mood.prompts.create(prompt_params)
         render json: @mood
     end
@@ -17,12 +16,6 @@ class Api::V1::PromptsController < ApplicationController
         @prompt = @mood.prompts.find(params[:id])
         render json: @prompt
     end
-
-    # def update
-    #     @prompt = @mood.prompts.find(params[:id])
-    #     @prompt.update(prompt_params)
-    #     render json: @mood
-    # end
 
     def destroy
         @prompt = @mood.prompts.find(params[:id])
@@ -33,7 +26,6 @@ class Api::V1::PromptsController < ApplicationController
     private
 
     def prompt_params
-    #   params.require(:prompt).permit(:desc, :mood_id, :controllable {action: [:desc, :prompt_id]})
       params.require(:prompt).permit(:desc, :mood_id, :controllable)
     end
 
