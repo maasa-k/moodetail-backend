@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     namespace :v1 do 
       resources :moods do
         resources :prompts do
+          resources :notes do
+          end
         end
       end
     end
